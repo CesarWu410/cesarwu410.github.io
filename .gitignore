@@ -1,7 +1,7 @@
 # Bundler cache
 .bundle
 vendor
-Gemfile.lock  # 取消注释以提交到仓库，让源代码插件能识别 Ruby 依赖
+# Gemfile.lock  # 取消注释以提交到仓库，让源代码插件能识别 Ruby 依赖
 
 # Jekyll cache
 .jekyll-cache
