@@ -4,5 +4,8 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+>你好，我是黑胶先生。
+>在AI行业摸爬滚打多年，习惯了快节奏的项目推进，却总盼着能有片刻安静的空间。
+>于是就有了这个小站。 它一半是我的生活自留地，用来记录忙碌工作之外那些让我慢下来的片刻；另一半是技术分享的小站台，把这些年在AI项目里攒下的思考、踩过的印记，慢慢整理出来和大家见面。
+>不追求高密度的更新，也不刻意制造热点，只希望在这里能守住一份安静的表达。也愿我们都能在快节奏的洪流里，找到属于自己的松弛节奏，彼此共勉，稳步向前。
 {: .prompt-tip }
