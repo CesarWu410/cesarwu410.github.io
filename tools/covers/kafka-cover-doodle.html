@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Kafka Cover — Doodle</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 900px; height: 383px; overflow: hidden; background: #FBF3E2; }
+  svg { display: block; width: 900px; height: 383px; }
+  text { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; }
+  .hand { font-family: "Comic Sans MS", "Segoe Print", cursive; }
+  .kai { font-family: "KaiTi", "STKaiti", "Microsoft YaHei", serif; }
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="383" viewBox="0 0 900 383">
+  <defs>
+    <pattern id="paperDots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#E3D3B8"/>
+    </pattern>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- paper -->
+  <rect width="900" height="383" fill="#FBF3E2"/>
+  <rect width="900" height="383" fill="url(#paperDots)" opacity="0.7"/>
+  <g stroke="#E9DCC4" stroke-width="1" opacity="0.55">
+    <path d="M0 74 H900"/><path d="M0 148 H900"/><path d="M0 222 H900"/><path d="M0 296 H900"/>
+  </g>
+
+  <!-- coffee ring and tape -->
+  <g opacity="0.5">
+    <circle cx="812" cy="46" r="27" fill="none" stroke="#C9A878" stroke-width="4"/>
+    <circle cx="812" cy="46" r="20" fill="none" stroke="#C9A878" stroke-width="1.5"/>
+    <path d="M792 60 Q 805 72 823 62" fill="none" stroke="#C9A878" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g transform="rotate(38 866 16)">
+    <rect x="828" y="2" width="76" height="26" fill="#FFB3C6" opacity="0.85"/>
+    <g stroke="#FFFDF7" stroke-width="4" opacity="0.8">
+      <path d="M838 2 L830 28"/><path d="M854 2 L846 28"/><path d="M870 2 L862 28"/><path d="M886 2 L878 28"/>
+    </g>
+  </g>
+
+  <!-- masking tape badge -->
+  <g transform="rotate(-2 145 52)">
+    <path d="M48 36 L242 33 L244 67 L46 70 Z" fill="#F1E0B0" opacity="0.92"/>
+    <path d="M48 36 L242 33" stroke="#D8C49A" stroke-width="1.5"/>
+    <text x="72" y="59" font-size="15" font-weight="700" fill="#6B5B4B">AI 项目经理视角 · 技术科普</text>
+  </g>
+
+  <!-- title -->
+  <path d="M46 100 Q 210 92 430 100 L428 184 Q 220 190 44 182 Z" fill="#FFE27A" opacity="0.6"/>
+  <text x="60" y="174" class="hand" font-size="90" font-weight="700" fill="#FF7A45" opacity="0.35" letter-spacing="2">KAFKA</text>
+  <text x="54" y="168" class="hand" font-size="90" font-weight="700" fill="#1F1F1F" letter-spacing="2">KAFKA</text>
+  <path d="M60 184 Q 130 176 200 183 T 330 180 T 420 184" fill="none" stroke="#FF7A45" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- subtitle -->
+  <path d="M50 202 Q 160 196 300 203 L298 242 Q 170 248 52 240 Z" fill="#FFB36B" opacity="0.72" transform="rotate(-1 175 222)"/>
+  <text x="66" y="234" class="kai" font-size="38" font-weight="700" fill="#1F1F1F" letter-spacing="1">不是卡夫卡</text>
+
+  <!-- tagline -->
+  <text x="58" y="284" class="kai" font-size="24" font-weight="600" fill="#4A4038" letter-spacing="0.5">一条会倒带的数据传送带</text>
+
+  <!-- sticky chips -->
+  <g>
+    <g transform="rotate(-3 90 326)">
+      <rect x="56" y="310" width="68" height="32" fill="#FFE27A" opacity="0.95"/>
+      <rect x="80" y="306" width="22" height="9" fill="#F1E0B0" opacity="0.9"/>
+      <text x="90" y="333" font-size="15" font-weight="700" fill="#1F1F1F" text-anchor="middle">解耦</text>
+    </g>
+    <g transform="rotate(2 170 326)">
+      <rect x="136" y="310" width="68" height="32" fill="#9AD9F5" opacity="0.95"/>
+      <rect x="160" y="306" width="22" height="9" fill="#F1E0B0" opacity="0.9"/>
+      <text x="170" y="333" font-size="15" font-weight="700" fill="#1F1F1F" text-anchor="middle">削峰</text>
+    </g>
+    <g transform="rotate(-1 250 326)">
+      <rect x="216" y="310" width="68" height="32" fill="#FFB3C6" opacity="0.95"/>
+      <rect x="240" y="306" width="22" height="9" fill="#F1E0B0" opacity="0.9"/>
+      <text x="250" y="333" font-size="15" font-weight="700" fill="#1F1F1F" text-anchor="middle">回放</text>
+    </g>
+  </g>
+
+  <!-- brand -->
+  <text x="56" y="368" class="hand" font-size="13" fill="#8A7761">黑胶先生 · 把技术讲成人话</text>
+
+  <!-- doodle arrow from text to belt -->
+  <path d="M396 296 C 424 286, 442 274, 462 268" fill="none" stroke="#1F1F1F" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5 5" opacity="0.7"/>
+  <path d="M462 268 L450 266 M462 268 L458 280" fill="none" stroke="#1F1F1F" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- ============ illustration ============ -->
+
+  <!-- conveyor -->
+  <g filter="url(#rough)">
+    <path d="M470 296 C 560 288, 660 304, 880 294 L880 316 C 660 326, 560 310, 470 318 Z" fill="#2F2F2F" stroke="#1F1F1F" stroke-width="4"/>
+    <path d="M484 310 C 584 304, 684 318, 870 308" stroke="#FF7A45" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M512 330 L512 360 M824 330 L824 360" stroke="#1F1F1F" stroke-width="5" stroke-linecap="round"/>
+    <g stroke="#1F1F1F" stroke-width="4" fill="#FFFDF7">
+      <circle cx="510" cy="326" r="11"/><circle cx="590" cy="326" r="11"/>
+      <circle cx="670" cy="326" r="11"/><circle cx="750" cy="326" r="11"/>
+      <circle cx="830" cy="326" r="11"/>
+    </g>
+    <g fill="#1F1F1F">
+      <circle cx="510" cy="326" r="3"/><circle cx="590" cy="326" r="3"/>
+      <circle cx="670" cy="326" r="3"/><circle cx="750" cy="326" r="3"/>
+      <circle cx="830" cy="326" r="3"/>
+    </g>
+    <g stroke="#1F1F1F" stroke-width="3" stroke-linecap="round" opacity="0.45">
+      <path d="M478 258 L496 258"/><path d="M470 276 L494 276"/>
+    </g>
+  </g>
+
+  <!-- sticky notes on belt -->
+  <g>
+    <g transform="rotate(-4 541 255)">
+      <rect x="505" y="226" width="82" height="70" fill="#1F1F1F" opacity="0.12"/>
+      <rect x="500" y="220" width="82" height="70" fill="#FFE27A" stroke="#1F1F1F" stroke-width="3"/>
+      <path d="M582 274 L582 290 L566 290 Z" fill="#E6C25A" stroke="#1F1F1F" stroke-width="2"/>
+      <rect x="524" y="212" width="34" height="14" fill="#F1E0B0" opacity="0.95" stroke="#D8C49A" stroke-width="1"/>
+      <text x="541" y="264" font-size="20" font-weight="800" fill="#1F1F1F" text-anchor="middle">订单</text>
+      <g stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" opacity="0.5">
+        <path d="M518 276 L564 276"/><path d="M518 283 L550 283"/>
+      </g>
+    </g>
+    <g transform="rotate(3 641 243)">
+      <rect x="605" y="214" width="82" height="70" fill="#1F1F1F" opacity="0.12"/>
+      <rect x="600" y="208" width="82" height="70" fill="#9AD9F5" stroke="#1F1F1F" stroke-width="3"/>
+      <path d="M682 262 L682 278 L666 278 Z" fill="#6FB8D6" stroke="#1F1F1F" stroke-width="2"/>
+      <rect x="624" y="200" width="34" height="14" fill="#F1E0B0" opacity="0.95" stroke="#D8C49A" stroke-width="1"/>
+      <text x="641" y="252" font-size="20" font-weight="800" fill="#1F1F1F" text-anchor="middle">日志</text>
+      <g stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" opacity="0.5">
+        <path d="M618 264 L664 264"/><path d="M618 271 L650 271"/>
+      </g>
+    </g>
+    <g transform="rotate(-2 741 255)">
+      <rect x="705" y="226" width="82" height="70" fill="#1F1F1F" opacity="0.12"/>
+      <rect x="700" y="220" width="82" height="70" fill="#FFB3C6" stroke="#1F1F1F" stroke-width="3"/>
+      <path d="M782 274 L782 290 L766 290 Z" fill="#E08FA8" stroke="#1F1F1F" stroke-width="2"/>
+      <rect x="724" y="212" width="34" height="14" fill="#F1E0B0" opacity="0.95" stroke="#D8C49A" stroke-width="1"/>
+      <text x="741" y="264" font-size="20" font-weight="800" fill="#1F1F1F" text-anchor="middle">事件</text>
+      <g stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" opacity="0.5">
+        <path d="M718 276 L764 276"/><path d="M718 283 L750 283"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- doodle character -->
+  <g>
+    <path d="M638 196 L612 176" stroke="#1F1F1F" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="609" cy="173" r="6" fill="#FFE0C2" stroke="#1F1F1F" stroke-width="3"/>
+    <path d="M682 196 L706 174" stroke="#1F1F1F" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="709" cy="171" r="6" fill="#FFE0C2" stroke="#1F1F1F" stroke-width="3"/>
+    <path d="M632 186 Q 657 176 682 186 L688 236 L626 236 Z" fill="#FF7A45" stroke="#1F1F1F" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="657" cy="207" r="10" fill="#FFFDF7" stroke="#1F1F1F" stroke-width="2.5"/>
+    <text x="657" y="212" font-size="12" font-weight="900" fill="#1F1F1F" text-anchor="middle" class="hand">K</text>
+    <circle cx="657" cy="153" r="31" fill="#FFE0C2" stroke="#1F1F1F" stroke-width="4"/>
+    <path d="M626 152 Q626 119 657 119 Q688 119 688 152" fill="none" stroke="#1F1F1F" stroke-width="9" stroke-linecap="round"/>
+    <path d="M638 126 Q646 116 657 120 M666 118 Q676 122 680 130" fill="none" stroke="#1F1F1F" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="646" cy="155" r="3.4" fill="#1F1F1F"/>
+    <circle cx="668" cy="155" r="3.4" fill="#1F1F1F"/>
+    <path d="M648 166 Q657 173 666 166" fill="none" stroke="#1F1F1F" stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="638" cy="164" r="4" fill="#FF9B8A" opacity="0.6"/>
+    <circle cx="676" cy="164" r="4" fill="#FF9B8A" opacity="0.6"/>
+  </g>
+
+  <!-- speech bubble -->
+  <g transform="rotate(2 752 100)">
+    <path d="M700 78 Q700 72 708 72 L806 74 Q814 74 814 82 L812 114 Q812 122 804 122 L744 121 L724 137 L730 121 L707 120 Q700 120 700 112 Z" fill="#FFFDF7" stroke="#1F1F1F" stroke-width="3"/>
+    <text x="757" y="104" class="kai" font-size="17" font-weight="700" fill="#1F1F1F" text-anchor="middle">排队中…</text>
+  </g>
+
+  <!-- replay doodle -->
+  <g>
+    <path d="M808 172 C 786 146, 828 120, 852 142 C 872 160, 858 190, 834 188" fill="none" stroke="#FF7A45" stroke-width="4" stroke-linecap="round"/>
+    <path d="M834 188 L820 184 M834 188 L832 174" fill="none" stroke="#FF7A45" stroke-width="4" stroke-linecap="round"/>
+    <text x="842" y="212" class="kai" font-size="15" font-weight="700" fill="#FF7A45" text-anchor="middle">可回放</text>
+  </g>
+
+  <!-- doodles -->
+  <g stroke="#1F1F1F" stroke-width="2.5" stroke-linecap="round" opacity="0.7">
+    <path d="M520 100 L520 114 M513 107 L527 107"/>
+    <path d="M596 66 L596 76 M591 71 L601 71"/>
+  </g>
+  <g stroke="#FF7A45" stroke-width="2.5" stroke-linecap="round" opacity="0.85">
+    <path d="M862 252 L862 266 M855 259 L869 259"/>
+    <path d="M486 196 C 500 188, 512 188, 522 194"/>
+  </g>
+  <g stroke="#2E8B8B" stroke-width="2" stroke-linecap="round" opacity="0.7">
+    <path d="M450 120 Q 470 108 490 120 T 530 120"/>
+  </g>
+</svg>
+</body>
+</html>

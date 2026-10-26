@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Kafka Cover — Isometric Dark Tech</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 900px; height: 383px; overflow: hidden; background: #050A12; }
+  svg { display: block; width: 900px; height: 383px; }
+  text { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; }
+  .latin { font-family: "Arial Black", "Microsoft YaHei", sans-serif; }
+  .mono { font-family: "Consolas", "Microsoft YaHei", monospace; }
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="383" viewBox="0 0 900 383">
+  <defs>
+    <radialGradient id="bgGlow" cx="70%" cy="50%" r="62%">
+      <stop offset="0%" stop-color="#123A66" stop-opacity="0.9"/>
+      <stop offset="58%" stop-color="#0A1A30" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#050A12" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4DE1FF" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#4DE1FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbCoral" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#BFE9FF"/>
+    </linearGradient>
+    <linearGradient id="beltTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#173250"/>
+      <stop offset="100%" stop-color="#0E1F35"/>
+    </linearGradient>
+    <pattern id="iso" width="60" height="30" patternUnits="userSpaceOnUse">
+      <path d="M0 15 L30 0 L60 15 L30 30 Z" fill="none" stroke="#14273F" stroke-width="1"/>
+    </pattern>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#FFFFFF" opacity="0.02"/>
+    </pattern>
+    <filter id="blur10" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="blur4" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="900" height="383" fill="#050A12"/>
+  <rect width="900" height="383" fill="url(#bgGlow)"/>
+  <rect width="900" height="383" fill="url(#iso)" opacity="0.7"/>
+  <rect width="900" height="383" fill="url(#scan)"/>
+  <ellipse cx="700" cy="240" rx="200" ry="150" fill="url(#orbCyan)"/>
+  <ellipse cx="620" cy="310" rx="240" ry="80" fill="url(#orbCoral)"/>
+
+  <!-- particles -->
+  <g fill="#9FE9FF">
+    <circle cx="470" cy="60" r="1.6" opacity="0.8"/><circle cx="520" cy="150" r="1.2" opacity="0.5"/>
+    <circle cx="870" cy="120" r="1.5" opacity="0.6"/><circle cx="450" cy="330" r="1.2" opacity="0.5"/>
+  </g>
+
+  <!-- badge -->
+  <rect x="56" y="42" width="232" height="34" rx="17" fill="#0B1626" stroke="#4DE1FF" stroke-width="1.5"/>
+  <circle cx="74" cy="59" r="4" fill="#4DE1FF"/>
+  <circle cx="74" cy="59" r="8" fill="#4DE1FF" opacity="0.18"/>
+  <text x="90" y="65" font-size="14" font-weight="600" fill="#9FE9FF" letter-spacing="0.5">AI 项目经理视角 · 技术科普</text>
+
+  <!-- title -->
+  <text x="54" y="160" class="latin" font-size="88" font-weight="900" fill="#4DE1FF" opacity="0.42" filter="url(#blur10)" letter-spacing="1">KAFKA</text>
+  <text x="58" y="166" class="latin" font-size="88" font-weight="900" fill="#FF6B35" opacity="0.95" letter-spacing="1">KAFKA</text>
+  <text x="52" y="160" class="latin" font-size="88" font-weight="900" fill="url(#titleFill)" letter-spacing="1">KAFKA</text>
+
+  <!-- subtitle -->
+  <g transform="rotate(-2 50 184)">
+    <rect x="50" y="184" width="258" height="50" rx="7" fill="#0E1B2E" stroke="#FF6B35" stroke-width="2.5"/>
+    <rect x="50" y="184" width="258" height="50" rx="7" fill="#FF6B35" opacity="0.22" filter="url(#blur10)"/>
+    <text x="70" y="219" font-size="30" font-weight="800" fill="#FFF3E8" letter-spacing="1">不是卡夫卡</text>
+  </g>
+
+  <!-- tagline -->
+  <text x="56" y="278" font-size="20" font-weight="500" fill="#B9CBE3" letter-spacing="0.5">一条会倒带的数据传送带</text>
+
+  <!-- chips -->
+  <g font-size="14" font-weight="700" fill="#8FE3FF">
+    <rect x="56" y="304" width="70" height="28" rx="14" fill="#0B1626" stroke="#24486E" stroke-width="1.5"/>
+    <text x="77" y="323">解耦</text>
+    <rect x="136" y="304" width="70" height="28" rx="14" fill="#0B1626" stroke="#24486E" stroke-width="1.5"/>
+    <text x="157" y="323">削峰</text>
+    <rect x="216" y="304" width="70" height="28" rx="14" fill="#0B1626" stroke="#24486E" stroke-width="1.5"/>
+    <text x="237" y="323">回放</text>
+  </g>
+
+  <!-- brand -->
+  <text x="56" y="368" font-size="12" fill="#5E7595" letter-spacing="1">黑胶先生 · 把技术讲成人话</text>
+
+  <!-- ================= isometric illustration ================= -->
+
+  <!-- glow under belt -->
+  <ellipse cx="690" cy="320" rx="200" ry="55" fill="#4DE1FF" opacity="0.14" filter="url(#blur10)"/>
+
+  <!-- data streams -->
+  <g fill="none" stroke="#4DE1FF" stroke-width="1.6" stroke-dasharray="3 7" opacity="0.55">
+    <path d="M448 138 C 490 120, 520 150, 552 186"/>
+    <path d="M462 92 C 510 78, 540 112, 572 150"/>
+  </g>
+  <g>
+    <rect x="440" y="128" width="20" height="16" rx="3" fill="#0B1626" stroke="#4DE1FF" stroke-width="2" transform="rotate(-8 440 128)"/>
+    <rect x="454" y="82" width="17" height="13" rx="2.5" fill="#0B1626" stroke="#FF6B35" stroke-width="2" transform="rotate(6 454 82)"/>
+    <circle cx="552" cy="186" r="3" fill="#4DE1FF"/>
+    <circle cx="572" cy="150" r="3" fill="#FF6B35"/>
+  </g>
+
+  <!-- conveyor side faces -->
+  <polygon points="590,210 830,330 830,342 590,222" fill="#08111F" stroke="#2A5A7E" stroke-width="1.5"/>
+  <polygon points="530,239 770,359 770,371 530,251" fill="#0B1626" stroke="#4DE1FF" stroke-width="1.5"/>
+
+  <!-- conveyor top face -->
+  <polygon points="590,210 830,330 770,359 530,239" fill="url(#beltTop)" stroke="#4DE1FF" stroke-width="2"/>
+  <!-- belt seams -->
+  <g stroke="#1C3A5C" stroke-width="1.2" opacity="0.55">
+    <path d="M626 228 L566 257"/>
+    <path d="M674 252 L614 281"/>
+    <path d="M722 276 L662 305"/>
+    <path d="M770 300 L710 329"/>
+    <path d="M818 324 L758 353"/>
+  </g>
+  <path d="M560 225 L800 345" stroke="#1C3A5C" stroke-width="1" stroke-dasharray="4 6" opacity="0.5"/>
+
+  <!-- orange edge -->
+  <path d="M530 239 L770 359" stroke="#FF6B35" stroke-width="4" stroke-linecap="round"/>
+  <path d="M590 210 L830 330" stroke="#FF6B35" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- rollers along front edge -->
+  <g>
+    <g fill="#0B1626" stroke="#4DE1FF" stroke-width="2">
+      <ellipse cx="559" cy="253" rx="12" ry="6"/>
+      <ellipse cx="602" cy="275" rx="12" ry="6"/>
+      <ellipse cx="650" cy="299" rx="12" ry="6"/>
+      <ellipse cx="698" cy="323" rx="12" ry="6"/>
+      <ellipse cx="741" cy="345" rx="12" ry="6"/>
+    </g>
+    <g fill="#4DE1FF">
+      <ellipse cx="559" cy="253" rx="4" ry="2"/>
+      <ellipse cx="602" cy="275" rx="4" ry="2"/>
+      <ellipse cx="650" cy="299" rx="4" ry="2"/>
+      <ellipse cx="698" cy="323" rx="4" ry="2"/>
+      <ellipse cx="741" cy="345" rx="4" ry="2"/>
+    </g>
+  </g>
+
+  <!-- hover pads -->
+  <g fill="#0A1524" stroke="#24486E" stroke-width="1.5">
+    <ellipse cx="610" cy="362" rx="22" ry="7"/>
+    <ellipse cx="748" cy="372" rx="22" ry="7"/>
+  </g>
+  <g fill="#4DE1FF" opacity="0.5">
+    <ellipse cx="610" cy="362" rx="10" ry="3"/>
+    <ellipse cx="748" cy="372" rx="10" ry="3"/>
+  </g>
+
+  <!-- data cubes -->
+  <g>
+    <!-- cube 1: 订单 -->
+    <ellipse cx="633" cy="230" rx="46" ry="30" fill="#FFD166" opacity="0.18" filter="url(#blur10)"/>
+    <polygon points="633,196 663,212 633,228 603,212" fill="#FFD166" stroke="#0A1220" stroke-width="2"/>
+    <polygon points="603,212 633,228 633,246 603,230" fill="#D9A93F" stroke="#0A1220" stroke-width="2"/>
+    <polygon points="633,228 663,212 663,230 633,246" fill="#B8862E" stroke="#0A1220" stroke-width="2"/>
+
+    <!-- cube 2: 日志 -->
+    <ellipse cx="700" cy="264" rx="46" ry="30" fill="#4DE1FF" opacity="0.16" filter="url(#blur10)"/>
+    <polygon points="700,230 730,246 700,262 670,246" fill="#8FE3FF" stroke="#0A1220" stroke-width="2"/>
+    <polygon points="670,246 700,262 700,280 670,264" fill="#4DA6C9" stroke="#0A1220" stroke-width="2"/>
+    <polygon points="700,262 730,246 730,264 700,280" fill="#2E7D9E" stroke="#0A1220" stroke-width="2"/>
+
+    <!-- cube 3: 事件 -->
+    <ellipse cx="768" cy="297" rx="46" ry="30" fill="#FF8FAB" opacity="0.16" filter="url(#blur10)"/>
+    <polygon points="768,263 798,279 768,295 738,279" fill="#FFB3C6" stroke="#0A1220" stroke-width="2"/>
+    <polygon points="738,279 768,295 768,313 738,297" fill="#D97A95" stroke="#0A1220" stroke-width="2"/>
+    <polygon points="768,295 798,279 798,297 768,313" fill="#B35A75" stroke="#0A1220" stroke-width="2"/>
+  </g>
+
+  <!-- floating labels -->
+  <g>
+    <path d="M633 182 L633 196" stroke="#FFD166" stroke-width="1.5" stroke-dasharray="2 3"/>
+    <rect x="602" y="158" width="62" height="24" rx="12" fill="#0B1626" stroke="#FFD166" stroke-width="1.5"/>
+    <text x="633" y="175" font-size="13" font-weight="700" fill="#FFD166" text-anchor="middle">订单</text>
+
+    <path d="M700 216 L700 230" stroke="#4DE1FF" stroke-width="1.5" stroke-dasharray="2 3"/>
+    <rect x="669" y="192" width="62" height="24" rx="12" fill="#0B1626" stroke="#4DE1FF" stroke-width="1.5"/>
+    <text x="700" y="209" font-size="13" font-weight="700" fill="#8FE3FF" text-anchor="middle">日志</text>
+
+    <path d="M768 249 L768 263" stroke="#FF8FAB" stroke-width="1.5" stroke-dasharray="2 3"/>
+    <rect x="737" y="225" width="62" height="24" rx="12" fill="#0B1626" stroke="#FF8FAB" stroke-width="1.5"/>
+    <text x="768" y="242" font-size="13" font-weight="700" fill="#FFB3C6" text-anchor="middle">事件</text>
+  </g>
+
+  <!-- drone -->
+  <g>
+    <path d="M730 98 L712 84 M786 98 L804 84" stroke="#4DE1FF" stroke-width="2"/>
+    <ellipse cx="710" cy="82" rx="13" ry="4" fill="none" stroke="#4DE1FF" stroke-width="2"/>
+    <ellipse cx="806" cy="82" rx="13" ry="4" fill="none" stroke="#4DE1FF" stroke-width="2"/>
+    <rect x="730" y="92" width="56" height="32" rx="12" fill="#0B1626" stroke="#4DE1FF" stroke-width="2"/>
+    <circle cx="758" cy="108" r="6" fill="#4DE1FF"/>
+    <circle cx="758" cy="108" r="11" fill="#4DE1FF" opacity="0.18"/>
+    <path d="M758 92 L758 80" stroke="#4DE1FF" stroke-width="2"/>
+    <circle cx="758" cy="78" r="3" fill="#FF6B35"/>
+  </g>
+
+  <!-- speech bubble -->
+  <g>
+    <rect x="676" y="38" width="116" height="38" rx="8" fill="#0B1626" stroke="#4DE1FF" stroke-width="2"/>
+    <path d="M756 76 L776 92 L738 76 Z" fill="#0B1626" stroke="#4DE1FF" stroke-width="2"/>
+    <rect x="744" y="76" width="16" height="4" fill="#0B1626"/>
+    <text x="734" y="62" font-size="12" font-weight="700" fill="#9FE9FF" text-anchor="middle" class="mono">&gt; 排队中…</text>
+  </g>
+
+  <!-- replay -->
+  <g>
+    <path d="M828 176 A 24 24 0 1 1 846 197" fill="none" stroke="#4DE1FF" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="6 5"/>
+    <path d="M846 197 L855 182 L836 181 Z" fill="#FF6B35"/>
+    <text x="836" y="224" font-size="13" font-weight="700" fill="#4DE1FF" text-anchor="middle">可回放</text>
+  </g>
+
+  <!-- sparkles -->
+  <g stroke="#4DE1FF" stroke-width="2.5" stroke-linecap="round" opacity="0.8">
+    <path d="M524 52 L524 66 M517 59 L531 59"/>
+    <path d="M872 270 L872 284 M865 277 L879 277"/>
+  </g>
+  <g stroke="#FF6B35" stroke-width="2.5" stroke-linecap="round" opacity="0.8">
+    <path d="M486 200 L486 212 M480 206 L492 206"/>
+  </g>
+
+</svg>
+</body>
+</html>

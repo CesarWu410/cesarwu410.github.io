@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Kafka Cover — Risograph</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 900px; height: 383px; overflow: hidden; background: #F1E6D0; }
+  svg { display: block; width: 900px; height: 383px; }
+  text { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; }
+  .serif { font-family: "Georgia", "SimSun", serif; }
+  .song { font-family: "SimSun", "Georgia", serif; }
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="383" viewBox="0 0 900 383">
+  <defs>
+    <pattern id="halftone" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#1D2B53"/>
+    </pattern>
+    <pattern id="halftonePink" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#FF5C8A"/>
+    </pattern>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <!-- paper -->
+  <rect width="900" height="383" fill="#F1E6D0"/>
+  <rect width="900" height="383" fill="url(#halftone)" opacity="0.06"/>
+
+  <!-- faded K -->
+  <text x="720" y="330" class="serif" font-size="300" font-weight="700" fill="#1D2B53" opacity="0.05">K</text>
+
+  <!-- halftone patches -->
+  <rect x="760" y="0" width="140" height="110" fill="url(#halftone)" opacity="0.16"/>
+  <circle cx="472" cy="88" r="30" fill="url(#halftonePink)" opacity="0.25"/>
+  <circle cx="520" cy="56" r="14" fill="url(#halftone)" opacity="0.20"/>
+
+  <!-- registration marks -->
+  <g stroke="#1D2B53" stroke-width="1.5" opacity="0.6">
+    <path d="M24 38 L24 22 M16 30 L32 30"/><circle cx="24" cy="30" r="8" fill="none"/>
+    <path d="M876 38 L876 22 M868 30 L884 30"/><circle cx="876" cy="30" r="8" fill="none"/>
+    <path d="M24 361 L24 345 M16 353 L32 353"/><circle cx="24" cy="353" r="8" fill="none"/>
+  </g>
+
+  <!-- small header -->
+  <text x="50" y="34" font-size="11" font-weight="700" fill="#1D2B53" letter-spacing="3">KAFKA / EVENT STREAMING / ISSUE 01</text>
+  <path d="M50 44 L430 44" stroke="#1D2B53" stroke-width="1.5"/>
+
+  <!-- title -->
+  <text x="42" y="174" class="serif" font-size="100" font-weight="700" fill="#FF8A3D" opacity="0.35" letter-spacing="1">KAFKA</text>
+  <text x="50" y="180" class="serif" font-size="100" font-weight="700" fill="#FF5C8A" opacity="0.55" letter-spacing="1">KAFKA</text>
+  <text x="46" y="176" class="serif" font-size="100" font-weight="700" fill="#1D2B53" letter-spacing="1">KAFKA</text>
+
+  <!-- subtitle band -->
+  <rect x="50" y="202" width="316" height="54" fill="#1D2B53" opacity="0.25"/>
+  <rect x="44" y="196" width="316" height="54" fill="#FF5C8A"/>
+  <rect x="44" y="196" width="316" height="54" fill="url(#halftone)" opacity="0.18"/>
+  <text x="64" y="234" class="song" font-size="33" font-weight="700" fill="#1D2B53" letter-spacing="1">不是卡夫卡</text>
+
+  <!-- tagline -->
+  <text x="48" y="286" class="song" font-size="21" font-weight="700" fill="#1D2B53" letter-spacing="0.5">一条会倒带的数据传送带</text>
+
+  <!-- chips -->
+  <g font-size="14" font-weight="700" fill="#1D2B53">
+    <rect x="48" y="312" width="76" height="30" fill="#F1E6D0" stroke="#1D2B53" stroke-width="2"/>
+    <rect x="48" y="312" width="76" height="30" fill="url(#halftone)" opacity="0.12"/>
+    <text x="86" y="332" text-anchor="middle">解耦</text>
+
+    <rect x="132" y="312" width="76" height="30" fill="#FF8A3D" stroke="#1D2B53" stroke-width="2"/>
+    <text x="170" y="332" text-anchor="middle">削峰</text>
+
+    <rect x="216" y="312" width="76" height="30" fill="#2EC4B6" stroke="#1D2B53" stroke-width="2"/>
+    <text x="254" y="332" text-anchor="middle">回放</text>
+  </g>
+
+  <!-- brand -->
+  <text x="48" y="368" font-size="12" font-weight="700" fill="#1D2B53" opacity="0.75" letter-spacing="1">黑胶先生 · 把技术讲成人话</text>
+
+  <!-- ================= illustration ================= -->
+
+  <!-- conveyor shadow -->
+  <path d="M476 302 L876 302 L856 342 L496 342 Z" fill="#1D2B53" opacity="0.18"/>
+  <!-- conveyor -->
+  <path d="M470 296 L870 296 L850 336 L490 336 Z" fill="#1D2B53"/>
+  <path d="M470 296 L870 296 L850 336 L490 336 Z" fill="url(#halftone)" opacity="0.18"/>
+  <path d="M470 296 L870 296" stroke="#FF8A3D" stroke-width="8"/>
+  <path d="M490 336 L850 336" stroke="#FF5C8A" stroke-width="4"/>
+
+  <!-- rollers -->
+  <g fill="#F1E6D0" stroke="#1D2B53" stroke-width="4">
+    <circle cx="510" cy="332" r="13"/><circle cx="590" cy="332" r="13"/>
+    <circle cx="670" cy="332" r="13"/><circle cx="750" cy="332" r="13"/>
+    <circle cx="830" cy="332" r="13"/>
+  </g>
+  <g fill="#FF8A3D">
+    <circle cx="510" cy="332" r="4"/><circle cx="590" cy="332" r="4"/>
+    <circle cx="670" cy="332" r="4"/><circle cx="750" cy="332" r="4"/>
+    <circle cx="830" cy="332" r="4"/>
+  </g>
+  <g fill="#1D2B53">
+    <rect x="510" y="342" width="12" height="20"/>
+    <rect x="824" y="342" width="12" height="20"/>
+  </g>
+
+  <!-- character -->
+  <g>
+    <path d="M640 198 L614 176" stroke="#1D2B53" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="611" cy="173" r="6" fill="#FFE0C2" stroke="#1D2B53" stroke-width="3"/>
+    <path d="M684 198 L710 174" stroke="#1D2B53" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="713" cy="171" r="6" fill="#FFE0C2" stroke="#1D2B53" stroke-width="3"/>
+    <rect x="636" y="182" width="54" height="56" rx="10" fill="#FF5C8A" stroke="#1D2B53" stroke-width="4"/>
+    <circle cx="663" cy="196" r="11" fill="#F1E6D0" stroke="#1D2B53" stroke-width="3"/>
+    <text x="663" y="201" class="serif" font-size="13" font-weight="700" fill="#1D2B53" text-anchor="middle">K</text>
+    <circle cx="663" cy="152" r="32" fill="#FFE0C2" stroke="#1D2B53" stroke-width="4"/>
+    <!-- newsboy cap -->
+    <path d="M632 148 Q632 116 663 116 Q694 116 694 148 L704 152 L626 152 Z" fill="#1D2B53"/>
+    <rect x="690" y="144" width="26" height="8" rx="4" fill="#1D2B53"/>
+    <path d="M638 134 Q650 126 664 128" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="652" cy="156" r="3.2" fill="#1D2B53"/>
+    <circle cx="674" cy="156" r="3.2" fill="#1D2B53"/>
+    <path d="M654 167 Q663 174 672 167" fill="none" stroke="#1D2B53" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="643" cy="164" r="4" fill="#FF5C8A" opacity="0.45"/>
+    <circle cx="683" cy="164" r="4" fill="#FF5C8A" opacity="0.45"/>
+  </g>
+
+  <!-- boxes -->
+  <g>
+    <rect x="506" y="224" width="80" height="70" fill="#1D2B53" opacity="0.2"/>
+    <rect x="500" y="218" width="80" height="70" fill="#FF8A3D" stroke="#1D2B53" stroke-width="4"/>
+    <rect x="500" y="218" width="80" height="70" fill="url(#halftone)" opacity="0.20"/>
+    <text x="540" y="252" class="song" font-size="21" font-weight="700" fill="#1D2B53" text-anchor="middle">订单</text>
+    <g stroke="#1D2B53" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+      <path d="M516 264 L564 264"/><path d="M516 272 L548 272"/>
+    </g>
+    <text x="570" y="230" font-size="10" fill="#1D2B53" text-anchor="end">01</text>
+
+    <rect x="606" y="212" width="80" height="70" fill="#1D2B53" opacity="0.2"/>
+    <rect x="600" y="206" width="80" height="70" fill="#2EC4B6" stroke="#1D2B53" stroke-width="4"/>
+    <rect x="600" y="206" width="80" height="70" fill="url(#halftone)" opacity="0.18"/>
+    <text x="640" y="240" class="song" font-size="21" font-weight="700" fill="#1D2B53" text-anchor="middle">日志</text>
+    <g stroke="#1D2B53" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+      <path d="M616 252 L664 252"/><path d="M616 260 L648 260"/>
+    </g>
+    <text x="670" y="218" font-size="10" fill="#1D2B53" text-anchor="end">02</text>
+
+    <rect x="706" y="224" width="80" height="70" fill="#1D2B53" opacity="0.2"/>
+    <rect x="700" y="218" width="80" height="70" fill="#FF5C8A" stroke="#1D2B53" stroke-width="4"/>
+    <rect x="700" y="218" width="80" height="70" fill="url(#halftone)" opacity="0.16"/>
+    <text x="740" y="252" class="song" font-size="21" font-weight="700" fill="#1D2B53" text-anchor="middle">事件</text>
+    <g stroke="#1D2B53" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+      <path d="M716 264 L764 264"/><path d="M716 272 L748 272"/>
+    </g>
+    <text x="770" y="230" font-size="10" fill="#1D2B53" text-anchor="end">03</text>
+  </g>
+
+  <!-- speech bubble -->
+  <g>
+    <rect x="706" y="88" width="122" height="46" fill="#1D2B53" opacity="0.2"/>
+    <rect x="700" y="82" width="122" height="46" fill="#F1E6D0" stroke="#1D2B53" stroke-width="3"/>
+    <path d="M720 128 L698 148 L740 128 Z" fill="#F1E6D0" stroke="#1D2B53" stroke-width="3"/>
+    <rect x="716" y="128" width="20" height="4" fill="#F1E6D0"/>
+    <text x="761" y="111" class="song" font-size="16" font-weight="700" fill="#1D2B53" text-anchor="middle">排队中…</text>
+  </g>
+
+  <!-- replay -->
+  <g>
+    <path d="M820 168 A 23 23 0 1 1 837 189" fill="none" stroke="#1D2B53" stroke-width="4" stroke-linecap="round" stroke-dasharray="5 4"/>
+    <path d="M837 189 L846 174 L827 173 Z" fill="#FF8A3D" stroke="#1D2B53" stroke-width="1.5"/>
+    <text x="828" y="214" class="song" font-size="13" font-weight="700" fill="#1D2B53" text-anchor="middle">可回放</text>
+  </g>
+
+  <!-- print decorations -->
+  <g fill="#FF5C8A">
+    <circle cx="470" cy="250" r="3"/><circle cx="486" cy="236" r="2"/>
+    <circle cx="860" cy="262" r="3"/><circle cx="872" cy="248" r="2"/>
+  </g>
+  <path d="M456 120 Q 470 108 484 120 T 512 120" fill="none" stroke="#FF5C8A" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+  <text x="852" y="368" font-size="10" fill="#1D2B53" text-anchor="end" letter-spacing="2">RISO / KAFKA / 01</text>
+
+  <!-- grain -->
+  <rect width="900" height="383" filter="url(#grain)" opacity="0.07"/>
+</svg>
+</body>
+</html>

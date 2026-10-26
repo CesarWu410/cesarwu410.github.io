@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Kafka WeChat Cover — Dark Tech</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 900px; height: 383px; overflow: hidden; background: #070D1A; }
+  svg { display: block; width: 900px; height: 383px; }
+  text { font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif; }
+  .latin { font-family: "Arial Black", "Microsoft YaHei", sans-serif; }
+  .mono { font-family: "Consolas", "Microsoft YaHei", monospace; }
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="383" viewBox="0 0 900 383">
+  <defs>
+    <radialGradient id="bgGlow" cx="72%" cy="46%" r="60%">
+      <stop offset="0%" stop-color="#123A66" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#0A1A30" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#070D1A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4DE1FF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#4DE1FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbCoral" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#BFE9FF"/>
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0 L0 0 0 30" fill="none" stroke="#1B2C46" stroke-width="1"/>
+    </pattern>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#FFFFFF" opacity="0.025"/>
+    </pattern>
+    <filter id="blur10" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="blur4" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="900" height="383" fill="#070D1A"/>
+  <rect width="900" height="383" fill="url(#bgGlow)"/>
+  <rect width="900" height="383" fill="url(#grid)" opacity="0.55"/>
+  <rect width="900" height="383" fill="url(#scan)"/>
+
+  <!-- ambient glows -->
+  <ellipse cx="700" cy="180" rx="180" ry="170" fill="url(#orbCyan)"/>
+  <ellipse cx="610" cy="300" rx="240" ry="90" fill="url(#orbCoral)"/>
+
+  <!-- circuit traces -->
+  <g fill="none" stroke="#1C3A5C" stroke-width="1.5" opacity="0.75">
+    <path d="M0 330 H70 L96 356 H170"/>
+    <path d="M0 60 H44 L66 82 H120"/>
+    <path d="M900 300 H840 L816 276 H760"/>
+    <path d="M900 96 H858 L834 120 H790"/>
+  </g>
+  <g fill="#4DE1FF" opacity="0.55">
+    <circle cx="70" cy="330" r="3"/><circle cx="44" cy="60" r="3"/>
+    <circle cx="840" cy="300" r="3"/><circle cx="858" cy="96" r="3"/>
+  </g>
+
+  <!-- stars -->
+  <g fill="#9FE9FF">
+    <circle cx="420" cy="38" r="1.6" opacity="0.8"/>
+    <circle cx="492" cy="86" r="1.2" opacity="0.55"/>
+    <circle cx="860" cy="200" r="1.5" opacity="0.6"/>
+    <circle cx="382" cy="140" r="1.3" opacity="0.5"/>
+    <circle cx="470" cy="318" r="1.4" opacity="0.5"/>
+  </g>
+
+  <!-- badge -->
+  <rect x="56" y="42" width="232" height="34" rx="17" fill="#0B1626" stroke="#4DE1FF" stroke-width="1.5" opacity="0.95"/>
+  <circle cx="74" cy="59" r="4" fill="#4DE1FF"/>
+  <circle cx="74" cy="59" r="8" fill="#4DE1FF" opacity="0.18"/>
+  <text x="90" y="65" font-size="14" font-weight="600" fill="#9FE9FF" letter-spacing="0.5">AI 项目经理视角 · 技术科普</text>
+
+  <!-- title -->
+  <text x="54" y="168" class="latin" font-size="92" font-weight="900" fill="#4DE1FF" opacity="0.45" filter="url(#blur10)" letter-spacing="1">KAFKA</text>
+  <text x="58" y="174" class="latin" font-size="92" font-weight="900" fill="#FF6B35" opacity="0.95" letter-spacing="1">KAFKA</text>
+  <text x="52" y="168" class="latin" font-size="92" font-weight="900" fill="url(#titleFill)" letter-spacing="1">KAFKA</text>
+
+  <!-- subtitle strip -->
+  <g transform="rotate(-3 50 192)">
+    <rect x="50" y="192" width="252" height="52" rx="8" fill="#FF6B35" opacity="0.35" filter="url(#blur10)"/>
+    <rect x="50" y="192" width="252" height="52" rx="8" fill="#0E1B2E" stroke="#FF6B35" stroke-width="2.5"/>
+    <text x="70" y="228" font-size="31" font-weight="800" fill="#FFF3E8" letter-spacing="1">不是卡夫卡</text>
+  </g>
+
+  <!-- tagline -->
+  <text x="56" y="288" font-size="21" font-weight="500" fill="#B9CBE3" letter-spacing="0.5">一条会倒带的数据传送带</text>
+
+  <!-- chips -->
+  <g font-size="14" font-weight="700" fill="#8FE3FF">
+    <g transform="rotate(-2 92 327)">
+      <rect x="56" y="312" width="72" height="30" rx="15" fill="#0B1626" stroke="#24486E" stroke-width="1.5"/>
+      <text x="77" y="332">解耦</text>
+    </g>
+    <g transform="rotate(1 174 327)">
+      <rect x="138" y="312" width="72" height="30" rx="15" fill="#0B1626" stroke="#24486E" stroke-width="1.5"/>
+      <text x="159" y="332">削峰</text>
+    </g>
+    <g transform="rotate(-1 256 327)">
+      <rect x="220" y="312" width="72" height="30" rx="15" fill="#0B1626" stroke="#24486E" stroke-width="1.5"/>
+      <text x="241" y="332">回放</text>
+    </g>
+  </g>
+
+  <!-- brand -->
+  <text x="56" y="368" font-size="12" fill="#5E7595" letter-spacing="1">黑胶先生 · 把技术讲成人话</text>
+
+  <!-- ================= illustration ================= -->
+
+  <!-- incoming data streams -->
+  <g fill="none" stroke="#4DE1FF" stroke-width="1.6" stroke-dasharray="3 7" opacity="0.55">
+    <path d="M430 120 C 470 98, 500 98, 528 118"/>
+    <path d="M448 82 C 490 60, 528 64, 556 86"/>
+  </g>
+  <g>
+    <rect x="424" y="110" width="22" height="17" rx="3" fill="#0B1626" stroke="#4DE1FF" stroke-width="2" transform="rotate(-8 424 110)"/>
+    <rect x="446" y="72" width="18" height="14" rx="2.5" fill="#0B1626" stroke="#FF6B35" stroke-width="2" transform="rotate(6 446 72)"/>
+    <circle cx="528" cy="118" r="3" fill="#4DE1FF"/>
+    <circle cx="556" cy="86" r="3" fill="#FF6B35"/>
+  </g>
+
+  <!-- sparkles -->
+  <g stroke="#4DE1FF" stroke-width="2.5" stroke-linecap="round" opacity="0.8">
+    <path d="M540 58 L540 72 M533 65 L547 65"/>
+    <path d="M852 238 L852 252 M845 245 L859 245"/>
+  </g>
+  <g stroke="#FF6B35" stroke-width="2.5" stroke-linecap="round" opacity="0.8">
+    <path d="M506 200 L506 212 M500 206 L512 206"/>
+  </g>
+
+  <!-- conveyor -->
+  <g transform="rotate(-4 690 300)">
+    <!-- glow under belt -->
+    <rect x="470" y="286" width="420" height="44" rx="22" fill="#4DE1FF" opacity="0.16" filter="url(#blur10)"/>
+    <!-- legs -->
+    <rect x="516" y="340" width="11" height="26" rx="4" fill="#1A2B40"/>
+    <rect x="824" y="340" width="11" height="26" rx="4" fill="#1A2B40"/>
+    <!-- belt -->
+    <rect x="470" y="286" width="420" height="44" rx="22" fill="#0D1A2B" stroke="#4DE1FF" stroke-width="2"/>
+    <rect x="470" y="286" width="420" height="12" rx="6" fill="#18314D"/>
+    <rect x="478" y="320" width="404" height="5" rx="2.5" fill="#FF6B35"/>
+    <!-- rollers -->
+    <g fill="#0B1626" stroke="#4DE1FF" stroke-width="2">
+      <circle cx="510" cy="330" r="13"/><circle cx="590" cy="330" r="13"/>
+      <circle cx="670" cy="330" r="13"/><circle cx="750" cy="330" r="13"/>
+      <circle cx="830" cy="330" r="13"/>
+    </g>
+    <g fill="#4DE1FF">
+      <circle cx="510" cy="330" r="4"/><circle cx="590" cy="330" r="4"/>
+      <circle cx="670" cy="330" r="4"/><circle cx="750" cy="330" r="4"/>
+      <circle cx="830" cy="330" r="4"/>
+    </g>
+    <!-- motion lines -->
+    <g stroke="#4DE1FF" stroke-width="2.5" stroke-linecap="round" opacity="0.35">
+      <path d="M482 250 L498 250"/><path d="M476 268 L496 268"/>
+    </g>
+
+    <!-- card 1 -->
+    <rect x="500" y="216" width="78" height="68" rx="8" fill="#FFD166" opacity="0.18" filter="url(#blur10)"/>
+    <rect x="500" y="216" width="78" height="68" rx="8" fill="#141C2B" stroke="#FFD166" stroke-width="2.5"/>
+    <path d="M500 228 L500 216 L512 216" fill="none" stroke="#FFD166" stroke-width="3"/>
+    <text x="539" y="246" font-size="18" font-weight="800" fill="#FFD166" text-anchor="middle">订单</text>
+    <g stroke="#FFD166" stroke-width="2.5" stroke-linecap="round" opacity="0.55">
+      <path d="M518 258 L560 258"/><path d="M518 266 L548 266"/>
+    </g>
+
+    <!-- card 2 -->
+    <rect x="600" y="224" width="78" height="60" rx="8" fill="#4DE1FF" opacity="0.15" filter="url(#blur10)"/>
+    <rect x="600" y="224" width="78" height="60" rx="8" fill="#141C2B" stroke="#4DE1FF" stroke-width="2.5"/>
+    <path d="M600 236 L600 224 L612 224" fill="none" stroke="#4DE1FF" stroke-width="3"/>
+    <text x="639" y="254" font-size="18" font-weight="800" fill="#8FE3FF" text-anchor="middle">日志</text>
+    <g stroke="#4DE1FF" stroke-width="2.5" stroke-linecap="round" opacity="0.55">
+      <path d="M618 266 L660 266"/><path d="M618 273 L646 273"/>
+    </g>
+
+    <!-- card 3 -->
+    <rect x="700" y="212" width="78" height="72" rx="8" fill="#FF8FAB" opacity="0.16" filter="url(#blur10)"/>
+    <rect x="700" y="212" width="78" height="72" rx="8" fill="#141C2B" stroke="#FF8FAB" stroke-width="2.5"/>
+    <path d="M700 224 L700 212 L712 212" fill="none" stroke="#FF8FAB" stroke-width="3"/>
+    <text x="739" y="242" font-size="18" font-weight="800" fill="#FFB3C6" text-anchor="middle">事件</text>
+    <g stroke="#FF8FAB" stroke-width="2.5" stroke-linecap="round" opacity="0.55">
+      <path d="M716 254 L762 254"/><path d="M716 262 L752 262"/>
+    </g>
+  </g>
+
+  <!-- chibi project manager -->
+  <g>
+    <!-- antenna -->
+    <path d="M662 126 L676 106" stroke="#4DE1FF" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="678" cy="104" r="4.5" fill="#4DE1FF"/>
+    <circle cx="678" cy="104" r="9" fill="#4DE1FF" opacity="0.2"/>
+    <!-- arms -->
+    <path d="M638 198 L618 178" stroke="#0A1220" stroke-width="6" stroke-linecap="round"/>
+    <path d="M638 198 L618 178" stroke="#E4572E" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="616" cy="176" r="6" fill="#FFD9B8" stroke="#0A1220" stroke-width="2"/>
+    <path d="M686 198 L708 172" stroke="#0A1220" stroke-width="6" stroke-linecap="round"/>
+    <path d="M686 198 L708 172" stroke="#E4572E" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="711" cy="169" r="6" fill="#FFD9B8" stroke="#0A1220" stroke-width="2"/>
+    <!-- body -->
+    <rect x="636" y="182" width="52" height="52" rx="17" fill="#E4572E" stroke="#0A1220" stroke-width="3"/>
+    <rect x="636" y="182" width="52" height="52" rx="17" fill="none" stroke="#FF8F6B" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="662" cy="204" r="10" fill="#0B1220"/>
+    <text x="662" y="209" font-size="13" font-weight="900" fill="#4DE1FF" text-anchor="middle" class="latin">K</text>
+    <!-- head -->
+    <circle cx="662" cy="156" r="31" fill="#FFD9B8" stroke="#0A1220" stroke-width="3"/>
+    <!-- hair -->
+    <path d="M631 154 Q631 121 662 121 Q693 121 693 154 Q681 139 662 139 Q643 139 631 154 Z" fill="#101826"/>
+    <!-- face -->
+    <circle cx="651" cy="158" r="3.2" fill="#0A1220"/>
+    <circle cx="673" cy="158" r="3.2" fill="#0A1220"/>
+    <circle cx="652" cy="157" r="1" fill="#9FE9FF"/>
+    <circle cx="674" cy="157" r="1" fill="#9FE9FF"/>
+    <path d="M653 168 Q662 175 671 168" fill="none" stroke="#0A1220" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="643" cy="166" r="4" fill="#FF9B8A" opacity="0.5"/>
+    <circle cx="681" cy="166" r="4" fill="#FF9B8A" opacity="0.5"/>
+  </g>
+
+  <!-- speech bubble -->
+  <rect x="702" y="84" width="118" height="44" rx="9" fill="#0B1626" stroke="#4DE1FF" stroke-width="2"/>
+  <path d="M720 126 L698 146 L738 126 Z" fill="#0B1626" stroke="#4DE1FF" stroke-width="2"/>
+  <rect x="712" y="126" width="18" height="4" fill="#0B1626"/>
+  <text x="760" y="112" font-size="14" font-weight="700" fill="#9FE9FF" text-anchor="middle" class="mono">&gt; 排队中…</text>
+
+  <!-- replay icon -->
+  <g>
+    <path d="M806 158 A 25 25 0 1 1 824 179" fill="none" stroke="#4DE1FF" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="6 5" opacity="0.9"/>
+    <path d="M824 179 L833 164 L814 163 Z" fill="#FF6B35"/>
+    <text x="792" y="208" font-size="13" font-weight="700" fill="#4DE1FF">可回放</text>
+  </g>
+
+  <!-- small label -->
+  <text x="872" y="368" font-size="11" fill="#5E7595" text-anchor="end" letter-spacing="1">KAFKA · EVENT STREAMING</text>
+</svg>
+</body>
+</html>
