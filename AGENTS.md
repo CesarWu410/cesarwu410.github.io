@@ -281,6 +281,18 @@ flowchart LR
 
 如果公众号的展示位可能裁成 1:1，额外导出一版 200×200 或 900×900。不要把 2.35:1 的首图直接裁切交付，标题和场景很容易被切掉。
 
+## 微信公众号文章排版
+
+公众号正文模板放在 `tools/wechat/`，完整样式规范见 `tools/wechat/STYLE.md`。当用户要求生成公众号文章或排版时，默认直接复用这套规范，不要重新设计版式。流程：
+
+1. 照常写 `_posts/*.md`，需要图表时继续用 Mermaid。
+2. 执行 `bundle exec jekyll build`。
+3. 执行 `python tools/wechat/convert.py "<文章 slug>"`。
+4. 打开 `tools/wechat/output/<slug>/preview.html`，先看 677px 和 375px 两种宽度。
+5. 点「复制正文」粘贴到公众号编辑器，上传 `images/` 里的图片，再用手机预览确认。如果复制后只剩纯文字，用 `python tools/wechat/serve.py "<slug>"` 通过 localhost 打开预览，再点复制。
+
+可选 front matter `wechat` 支持 `lead`、`kickers`、`cards`，具体见 `tools/wechat/README.md`。文章标准的 `description` 会自动放在公众号正文最上方，渲染成红色描边、透明填充、外发光的卡片，正文 14px 加粗 / 1.6 行高。正文结束后会自动追加居中的「END」分割线。Mermaid 图会自动导出 PNG；横向特别长的图会在图下加「点击图片查看大图」。公众号会清洗部分样式，表格、代码卡片和图片宽度以手机预览为准。`tools/` 已被 `_config.yml` 排除，不会发布到博客。
+
 ## 修改已有文章时
 
 尊重作者在磁盘上的手动修改，不要因为与规范不一致就整段回退。只改用户点名的问题，顺带修复同一段里明显的错别字或事实错误。改完重新构建，并在回复里说明改了哪里。
